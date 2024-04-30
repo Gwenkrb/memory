@@ -21,6 +21,11 @@ a{
     font-size: 25px;
 }
 
+h1{
+    display: flex;
+    justify-content: space-around;
+}
+
 .board-container{
     /* Met en flex pour bouger nos cartes librement */
     display: flex;
@@ -29,19 +34,17 @@ a{
     /* le flex-direction permet de déterminer comment est organisée notre box : lignes, colonnes */
     flex-direction: row;
     /* Crée une taille déterminée pour notre box */
-    width: 640px;
-    height: 640px;
-    border: solid 3px grey;
+    width: 50vw;
+    height: 40vw;
+    border: solid 3px rgba(128, 128, 128, 0.342);
     border-radius: 10px;
-    margin: 10px;
     padding: 5px;
-    align-content: center;
     justify-content: center;
     /* C'est ce qui donne l'effet 3D quand on clique sur la carte */
     perspective: 1000px;
 }
 
-.stats, .controls{
+.stats, .controls, .timer, .moves{
     display: flex;
     flex-direction: row;
     justify-content: center;
