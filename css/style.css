@@ -2,8 +2,23 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
     /* avec border box les éléments d'une section s'adaptent à la taille que l'on définit pour cette section */
+}
+
+.body{
+    display: flex;
+    background-color: whitesmoke;
+}
+
+.top-navigation {
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    margin: 10px;
+    font-size: 25px;
 }
 
 .board-container{
@@ -12,22 +27,60 @@
     /* le flex-wrap permet de déterminer si il y a une seule ligne ou plusieurs lignes*/
     flex-wrap: wrap;
     /* le flex-direction permet de déterminer comment est organisée notre box : lignes, colonnes */
-    flex-direction: column;
+    flex-direction: row;
+    /* Crée une taille déterminée pour notre box */
     width: 640px;
     height: 640px;
-    border: solid 5px black;
-    padding: 10px;
+    border: solid 3px grey;
+    border-radius: 10px;
     margin: 10px;
+    padding: 5px;
+    align-content: center;
+    justify-content: center;
+    /* C'est ce qui donne l'effet 3D quand on clique sur la carte */
+    perspective: 1000px;
+}
+
+.stats, .controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 5px;
 }
 
 .memory-card{
     width: calc(25% - 10px);
     height: calc(33.333% - 10px);
     position: relative;
+    margin: 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    /* J'ai pas compris ça */
+    transform-style: preserve-3d;
+    /* C'est ce qui définit le temps que met une carte à se retourner */
+    transition: transform .5s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
 }
 
 .recto-face, .verso-face {
     width: 100%;
     height: 100%;
     position: absolute;
+    border-radius: 5px;
+    background: blanchedalmond;
+    padding: 5px;
+    backface-visibility: hidden;
+}
+
+.verso-face {
+    transform: rotateY(180deg);
+}
+
+.memory-card:active {
+    transform: scale(0.80);
+    transition: transform .1s;
 }
