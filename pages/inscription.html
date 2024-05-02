@@ -6,6 +6,7 @@
     <title>Inscription</title>
     <link rel="stylesheet" href="/memory/css/style.css">
     <script src="/memory/js/main.js" defer></script>
+    <script src="/memory/js/verif.js" defer></script>
 </head>
 <body>
     <div class="top-navigation">
@@ -18,21 +19,23 @@
         </nav>
     </div>
     <h1>Inscription</h1>
-    <form action="" method="" class="form-inscription">
-        <!-- choisir méthode get ou post -->
+    <form action="" method="post" class="form-inscription" id="registerForm">
         <div class="form-user">
             <label for="name">Nom d'utilisateur</label>
             <input type="text" id="name" placeholder="3 caractères minimum">
         </div>
+        <div class="errorMessage" id="error-name"></div>
         <div class="form-email">
-            <label for="mail">Entrez votre mot de passe</label>
-            <input type="email" id="mail" placeholder="Votre email">
+            <label for="email">Entrez votre mail</label>
+            <input type="text" id="email" placeholder="Votre email">
         </div>
-        <div class="form-password">
-            <label for="password">Adresse email</label>
-            <input type="password" id="password" placeholder="Votre mot de passe">
+        <div class="errorMessage" id="error-email"></div>
+        <div id="form-password">
+            <label for="password">Mot de passe</label>
+            <input type="text" id="password" placeholder="Votre mot de passe">
         </div>
-        <!-- insérer un bouton pour le submit -->
+        <div class="errorMessage" id="error-password"></div>
+        <button class="btn">Enregistrer</button>
     </form>
 </body>
 </html>
