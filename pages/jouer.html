@@ -6,6 +6,10 @@
     <title>Jouer</title>
     <link rel="stylesheet" href="/memory/css/style.css">
     <script src="/memory/js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Varela&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="top-navigation">
@@ -24,8 +28,7 @@
             <button>Start</button>
             <!-- Créer addEventListener à partir du click sur le bouton -->
             <div class="stats">
-                <div class="moves">0 déplacements. </div>
-                <div class="timer"> Chronomètre : 0 secondes</div>
+                <div class="moves" id="cptMessage">0 déplacements. </div>
             </div>
         </div>
         <!-- expliquer pourquoi le choix du data-card-value -->
@@ -86,5 +89,6 @@
                 </div>
             </section>
     </div>
+    <section class="introText">Vous pouvez recommencer une partie en appuyant sur <strong>la barre espace</strong>.</section>
 </body>
 </html>

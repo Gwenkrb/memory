@@ -5,15 +5,28 @@
     /* avec border box les éléments d'une section s'adaptent à la taille que l'on définit pour cette section */
 }
 
-.body{
-    display: flex;
-    background-color: whitesmoke;
+body{
+    background: rgb(204, 180, 122);
+    background: linear-gradient(90deg, rgba(204, 180, 122, 1) 0%, rgba(228, 206, 29, 1) 0%, rgba(222, 149, 27, 1) 100%);
 }
 
 .top-navigation {
     margin: 20px;
+    padding: 15px;
     display: flex;
     justify-content: space-around;
+    background: rgb(204, 180, 122);
+    background: linear-gradient(283deg, rgba(204, 180, 122, 1) 0%, rgba(228, 206, 29, 1) 0%, rgba(222, 149, 27, 1) 100%);
+    border: solid 2px rgba(0, 0, 0, 0.4);
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+button {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-style: ;
 }
 
 a{
@@ -24,6 +37,35 @@ a{
 h1{
     display: flex;
     justify-content: space-around;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+form {
+    margin: 5px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    width: 70vw;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    border: solid 3px rgba(128, 128, 128, 0.342);
+    border-radius: 10px;
+    background: blanchedalmond;
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.form-user, .form-email, .form-password {
+    padding: 10px;
+}
+
+.errorMessage {
+    color: rgb(197, 0, 0);
 }
 
 .board-container{
@@ -38,7 +80,8 @@ h1{
     height: 40vw;
     border: solid 3px rgba(128, 128, 128, 0.342);
     border-radius: 10px;
-    padding: 5px;
+    padding: 5px auto;
+    margin: 5px auto;
     justify-content: center;
     /* C'est ce qui donne l'effet 3D quand on clique sur la carte */
     perspective: 1000px;
@@ -86,4 +129,18 @@ h1{
 .memory-card:active {
     transform: scale(0.80);
     transition: transform .1s;
+}
+
+.imgIntro{
+    height: 40vh;
+    margin: 10px;
+}
+
+.introText{
+    display: flex;
+    flex-direction: column;
+    padding: 25px auto;
+    margin: 10px auto;
+    justify-content: center;
+    text-align: center;
 }
