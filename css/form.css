@@ -1,0 +1,63 @@
+.form-inscription {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "box"
+}
+
+.box {
+    grid-area: box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 400px;
+    background-color: #FFF;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    box-shadow: 0 3px 60px rgba(57, 73, 76, 0.35);
+    opacity: 0.9;
+}
+
+.box h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #222;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 2em;
+}
+
+.box input {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #999;
+}
+
+.box button {
+    font-size: 1.1em;
+    border-bottom: none;
+    cursor: pointer;
+    background: #37a000;
+    color: #FFF;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.errorMessage {
+    color: rgb(197, 0, 0);
+    margin-bottom: 15px;
+    font-size: 0.8em;
+}
