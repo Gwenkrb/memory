@@ -2,13 +2,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* avec border box les éléments d'une section s'adaptent à la taille que l'on définit pour cette section */
 }
 
 body{
     background-image: url(/ressources/memory-legume/backgroundFruits.png);
-    /* background: rgb(204, 180, 122);
-    background: linear-gradient(90deg, rgba(204, 180, 122, 1) 0%, rgba(228, 206, 29, 1) 0%, rgba(222, 149, 27, 1) 100%); */
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 header {
@@ -19,6 +20,11 @@ header {
     justify-content: space-around;
     background: #232323;
     color: #ccc;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 0.9em;
 }
 
 .logo {
@@ -136,13 +142,9 @@ h1{
 }
 
 .board-container{
-    /* Met en flex pour bouger nos cartes librement */
     display: flex;
-    /* le flex-wrap permet de déterminer si il y a une seule ligne ou plusieurs lignes*/
     flex-wrap: wrap;
-    /* le flex-direction permet de déterminer comment est organisée notre box : lignes, colonnes */
     flex-direction: row;
-    /* Crée une taille déterminée pour notre box */
     width: 50vw;
     height: 40vw;
     border: solid 3px rgba(128, 128, 128, 0.342);
@@ -170,9 +172,7 @@ h1{
     margin: 5px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     transform: scale(1);
-    /* J'ai pas compris ça */
     transform-style: preserve-3d;
-    /* C'est ce qui définit le temps que met une carte à se retourner */
     transition: transform .5s;
 }
 

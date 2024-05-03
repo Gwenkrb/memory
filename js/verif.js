@@ -56,14 +56,11 @@ $contactForm.addEventListener("submit", (event) => {
     console.log(user);
 
     if (errors.length > 0) {
-        // relancer la boucle, effacer tableaux
         user = [];
         errors = [];
     } else {
         alert("Vous avez enregistré votre profil avec succès !")
-        // enregistrer tableau user dans local storage
         localStorage.setItem("user", JSON.stringify(user));
-        // nettoyer les inputs
         document.getElementById("registerForm").reset();
     }
 
