@@ -4,88 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jouer</title>
-    <link rel="stylesheet" href="/memory/css/style.css">
-    <script src="/memory/js/main.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Varela&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="top-navigation">
-        <nav>
-            <a href="/memory/index.html" class="navigation">Accueil</a>
-            <a href="jouer.html" class="navigation">Jouer</a>
-            <a href="profil.html" class="navigation">Profil</a>
-            <a href="inscription.html" class="navigation">Inscription</a>
-            <a href="connexion.html" class="navigation">Connexion</a>
-        </nav>
+        <header>
+            <h3 class="logo">Memory ENI</h3>
+            <ul class="nav">
+                <li class="navlink"><a href="/index.html">Accueil</a></li>
+                <li class="navlink"><a href="jouer.html">Jouer</a></li>
+                <li class="navlink"><a href="profil.html">Profil</a></li>
+                <li class="navlink"><a href="inscription.html">Inscription</a></li>
+                <li class="navlink"><a href="connexion.html">Connexion</a></li>
+                <div class="burger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </ul>
+        </header>
     </div>
     <h1>Jouer</h1>
     <!-- Création des balises qui vont inclure le memory -->
     <div class="game">
         <div class="controls">
-            <button>Start</button>
-            <!-- Créer addEventListener à partir du click sur le bouton -->
             <div class="stats">
-                <div class="moves" id="cptMessage">0 déplacements. </div>
+                <div class="moves" id="cptMessage">0 coups</div>
             </div>
         </div>
         <!-- expliquer pourquoi le choix du data-card-value -->
         <!-- erreur parce que j'avais écrit -->
             <section class="board-container">
                 <div class="memory-card" data-card="pomme">
-                    <img class="verso-face" src="/memory/ressources/memory-legume/1.svg" alt="Pomme">
-                    <img class="recto-face" src="/memory/ressources/question.svg" alt="Carte face retournée">
+                    <img class="verso-face" src="/ressources/memory-legume/1.svg" alt="Pomme">
+                    <img class="recto-face" src="/ressources/question.svg" alt="Carte face retournée">
                 </div>
                 <div class="memory-card" data-card="pomme">
-                    <img class="verso-face" src="/memory/ressources/memory-legume/1.svg" alt="Pomme">
-                    <img class="recto-face" src="/memory/ressources/question.svg" alt="Carte face retournée">
+                    <img class="verso-face" src="/ressources/memory-legume/1.svg" alt="Pomme">
+                    <img class="recto-face" src="/ressources/question.svg" alt="Carte face retournée">
                 </div>
 
                 <div class="memory-card" data-card="banane">
-                    <img class="verso-face" src="/memory/ressources/memory-legume/2.svg" alt="Banane">
-                    <img class="recto-face" src="/memory/ressources/question.svg" alt="Carte face retournée">
+                    <img class="verso-face" src="/ressources/memory-legume/2.svg" alt="Banane">
+                    <img class="recto-face" src="/ressources/question.svg" alt="Carte face retournée">
                 </div>
                 <div class="memory-card" data-card="banane">
-                    <img class="verso-face" src="/memory/ressources/memory-legume/2.svg" alt="Banane">
-                    <img class="recto-face" src="/memory/ressources/question.svg" alt="Carte face retournée">
+                    <img class="verso-face" src="/ressources/memory-legume/2.svg" alt="Banane">
+                    <img class="recto-face" src="/ressources/question.svg" alt="Carte face retournée">
                 </div>
 
                 <div class="memory-card" data-card="brocoli">
-                    <img class="verso-face" src="/memory/ressources/memory-legume/3.svg" alt="Brocoli">
-                    <img class="recto-face" src="/memory/ressources/question.svg" alt="Carte face retournée">
+                    <img class="verso-face" src="/ressources/memory-legume/3.svg" alt="Brocoli">
+                    <img class="recto-face" src="/ressources/question.svg" alt="Carte face retournée">
                 </div>
                 <div class="memory-card" data-card="brocoli">
-                    <img class="verso-face" src="/memory/ressources/memory-legume/3.svg" alt="Brocoli">
-                    <img class="recto-face" src="/memory/ressources/question.svg" alt="Carte face retournée">
+                    <img class="verso-face" src="/ressources/memory-legume/3.svg" alt="Brocoli">
+                    <img class="recto-face" src="/ressources/question.svg" alt="Carte face retournée">
                 </div>
 
                 <div class="memory-card" data-card="cerise">
-                    <img class="verso-face" src="/memory/ressources/memory-legume/4.svg" alt="Cerise">
-                    <img class="recto-face" src="/memory/ressources/question.svg" alt="Carte face retournée">
+                    <img class="verso-face" src="/ressources/memory-legume/4.svg" alt="Cerise">
+                    <img class="recto-face" src="/ressources/question.svg" alt="Carte face retournée">
                 </div>
                 <div class="memory-card" data-card="cerise">
-                    <img class="verso-face" src="/memory/ressources/memory-legume/4.svg" alt="Cerise">
-                    <img class="recto-face" src="/memory/ressources/question.svg" alt="Carte face retournée">
+                    <img class="verso-face" src="/ressources/memory-legume/4.svg" alt="Cerise">
+                    <img class="recto-face" src="/ressources/question.svg" alt="Carte face retournée">
                 </div>
 
                 <div class="memory-card" data-card="piment">
-                    <img class="verso-face" src="/memory/ressources/memory-legume/5.svg" alt="Piment">
-                    <img class="recto-face" src="/memory/ressources/question.svg" alt="Carte face retournée">
+                    <img class="verso-face" src="/ressources/memory-legume/5.svg" alt="Piment">
+                    <img class="recto-face" src="/ressources/question.svg" alt="Carte face retournée">
                 </div>
                 <div class="memory-card" data-card="piment">
-                    <img class="verso-face" src="/memory/ressources/memory-legume/5.svg" alt="Piment">
-                    <img class="recto-face" src="/memory/ressources/question.svg" alt="Carte face retournée">
+                    <img class="verso-face" src="/ressources/memory-legume/5.svg" alt="Piment">
+                    <img class="recto-face" src="/ressources/question.svg" alt="Carte face retournée">
                 </div>
 
                 <div class="memory-card" data-card="fraise">
-                    <img class="verso-face" src="/memory/ressources/memory-legume/6.svg" alt="Fraise">
-                    <img class="recto-face" src="/memory/ressources/question.svg" alt="Carte face retournée">
+                    <img class="verso-face" src="/ressources/memory-legume/6.svg" alt="Fraise">
+                    <img class="recto-face" src="/ressources/question.svg" alt="Carte face retournée">
                 </div>
                 <div class="memory-card" data-card="fraise">
-                    <img class="verso-face" src="/memory/ressources/memory-legume/6.svg" alt="Fraise">
-                    <img class="recto-face" src="/memory/ressources/question.svg" alt="Carte face retournée">
+                    <img class="verso-face" src="/ressources/memory-legume/6.svg" alt="Fraise">
+                    <img class="recto-face" src="/ressources/question.svg" alt="Carte face retournée">
                 </div>
             </section>
     </div>

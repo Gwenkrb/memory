@@ -6,27 +6,54 @@
 }
 
 body{
-    background: rgb(204, 180, 122);
-    background: linear-gradient(90deg, rgba(204, 180, 122, 1) 0%, rgba(228, 206, 29, 1) 0%, rgba(222, 149, 27, 1) 100%);
+    background-image: url(/ressources/memory-legume/backgroundFruits.png);
+    /* background: rgb(204, 180, 122);
+    background: linear-gradient(90deg, rgba(204, 180, 122, 1) 0%, rgba(228, 206, 29, 1) 0%, rgba(222, 149, 27, 1) 100%); */
 }
 
-.top-navigation {
-    margin: 20px;
-    padding: 15px;
+header {
+    width: 100%;
+    height: 70px;
     display: flex;
+    align-items: center;
     justify-content: space-around;
-    background: rgb(204, 180, 122);
-    background: linear-gradient(283deg, rgba(204, 180, 122, 1) 0%, rgba(228, 206, 29, 1) 0%, rgba(222, 149, 27, 1) 100%);
-    border: solid 2px rgba(0, 0, 0, 0.4);
-    font-family: "Varela", sans-serif;
+    background: #232323;
+    color: #ccc;
+}
+
+.logo {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal;
 }
 
+.nav {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.navlink {
+    list-style: none;
+    margin: 0;
+}
+
+.navlink a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.burger {
+    font-size: 1.2em;
+    display: none;
+}
+
 button {
-    padding-left: 5px;
-    padding-right: 5px;
-    font-style: ;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 a{
@@ -37,35 +64,75 @@ a{
 h1{
     display: flex;
     justify-content: space-around;
-    font-family: "Press Start 2P", system-ui;
+    font-family: "Jaro", sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 4em;
 }
 
-form {
-    margin: 5px auto;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    height: 30vh;
-    width: 70vw;
-    justify-content: space-between;
+.form-inscription {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "box"
+}
+
+.box {
+    grid-area: box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    border: solid 3px rgba(128, 128, 128, 0.342);
+    width: 400px;
+    background-color: #FFF;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, .1);
     border-radius: 10px;
-    background: blanchedalmond;
-    font-family: "Varela", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    box-shadow: 0 3px 60px rgba(57, 73, 76, 0.35);
+    opacity: 0.9;
 }
 
-.form-user, .form-email, .form-password {
-    padding: 10px;
+.box h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #222;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 2em;
+}
+
+.box input {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #999;
+}
+
+.box button {
+    font-size: 1.1em;
+    border-bottom: none;
+    cursor: pointer;
+    background: #37a000;
+    color: #FFF;
+    padding: 5px;
+    text-transform: uppercase;
 }
 
 .errorMessage {
     color: rgb(197, 0, 0);
+    margin-bottom: 15px;
 }
 
 .board-container{
@@ -82,17 +149,18 @@ form {
     border-radius: 10px;
     padding: 5px auto;
     margin: 5px auto;
+    background-color: #232323;
     justify-content: center;
-    /* C'est ce qui donne l'effet 3D quand on clique sur la carte */
-    perspective: 1000px;
 }
 
-.stats, .controls, .timer, .moves{
+.moves{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
     padding: 5px;
+    font-family: "Press Start 2P", system-ui;
+    font-style: normal;
 }
 
 .memory-card{
@@ -143,4 +211,21 @@ form {
     margin: 10px auto;
     justify-content: center;
     text-align: center;
+}
+
+.boxIntro {
+    width: 60vw;
+    border: solid black 1px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px auto;
+    text-align: center;
+    background-color: #FFF;
+    opacity: 0.8;
+    font-size: 1.2em;
+    box-shadow: 0 3px 60px rgba(57, 73, 76, 0.35);
+}
+
+.boxIntro ul{
+    list-style-type: none;
 }
